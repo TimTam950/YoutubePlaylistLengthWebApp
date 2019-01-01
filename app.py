@@ -12,4 +12,3 @@ def home():
         length = url.run()
 
     return render_template("home.html", length=length)
-
