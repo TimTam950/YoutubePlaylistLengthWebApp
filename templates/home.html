@@ -3,20 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Playlist Length</title>
-</head>
-<body>
-    <h1>YouTube Playlist Length</h1>
 
-    <p>
+    <style>
+    * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+    }
+
+    /* Style the content */
+    .content {
+      background-color: #ddd;
+      padding: 10px;
+
+    }
+
+    /* Style the footer */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="topnav">
+        <h1 style="color:#f2f2f2">YouTube Playlist Length</h1>
+    </div>
+
+    <div class="content">
+        <p>
         Welcome to the YouTube Playlist Length App. Just paste a complete Youtube playlist URL below and the length of
         that playlist will be displayed. Enjoy!
-    </p>
+        </p>
 
-    <form method="POST" action="/">
-      <input type="text" name="url">
-      <input type="submit" value="Submit">
-    </form>
+        <form method="POST" action="/">
+          <input type="text" name="url">
+          <input type="submit" value="Submit">
+        </form>
 
-    {{length}}
+        {{length}}
+    </div>
+
+    <div class="footer">
+        <p>Created by Thomas Winterfield. CSS from w3schools.com</p>
+    </div>
 </body>
 </html>

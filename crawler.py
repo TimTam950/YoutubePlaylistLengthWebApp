@@ -10,7 +10,7 @@ class Crawler:
         self.playlist_url = url
 
     @staticmethod
-    def parse_length(request):
+    def parse_times(request):
         soup = BeautifulSoup(request.content, 'html.parser')
         results = soup.find_all('div', {"class": "timestamp"})
         times = []
@@ -46,7 +46,7 @@ class Crawler:
     def run(self):
         try:
             playlist_request = requests.get(self.playlist_url)
-            times = self.parse_length(playlist_request)
+            times = self.parse_times(playlist_request)
             total_seconds = self.process_times(times)
             playlist_length = self.calculate_length(total_seconds)
             return playlist_length
